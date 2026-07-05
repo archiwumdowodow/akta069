@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKTA 069</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111;
+      color: #111;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .paper {
+      background: #e6e1d2;
+      width: 100%;
+      max-width: 720px;
+      padding: 38px 30px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+      border: 1px solid #999;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 0 0 20px;
+      border-bottom: 3px solid #111;
+      display: inline-block;
+    }
+
+    .text {
+      font-size: 20px;
+      line-height: 1.6;
+      white-space: pre-line;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      font-size: 20px;
+      font-family: "Courier New", monospace;
+      border: 2px solid #111;
+      background: #f7f3e8;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      font-family: "Courier New", monospace;
+      background: #111;
+      color: #eee;
+      border: none;
+      cursor: pointer;
+    }
+
+    .error {
+      color: #7a0000;
+      margin-top: 15px;
+      font-weight: bold;
+      display: none;
+    }
+
+    #caseFile {
+      display: none;
+    }
+
+    .status {
+      margin: 25px 0;
+      padding: 15px;
+      border: 2px solid #111;
+      background: rgba(255,255,255,0.25);
+      line-height: 1.5;
+    }
+
+    .letter {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="paper" id="login">
+    <h1>AKTA 069</h1>
+
+    <div class="text">Jeżeli dotarłaś aż tutaj,
+znasz już odpowiedź.
+
+Wpisz imię,
+którego nie wolno wymawiać.</div>
+
+    <input id="password" type="text" placeholder="Wpisz hasło..." />
+    <button onclick="checkPassword()">ODBLOKUJ AKTA</button>
+
+    <div class="error" id="error">BŁĄD 403 — dostęp odmówiony.</div>
+  </div>
+
+  <div class="paper" id="caseFile">
+    <h1>AKTA SPRAWY 069</h1>
+
+    <div class="status">
+      STATUS: SPRAWA ODBLOKOWANA<br>
+      DOWÓD RZECZOWY: ODZYSKANY<br>
+      MOTYW: ŻAL<br>
+      DECYZJA: NALEŻY DO CIEBIE
+    </div>
+
+    <div class="letter">
+<!-- 
+TU WPISZ SWÓJ TEKST PRZEPROSIN.
+
+Usuń ten komentarz i wklej normalnie list, np.:
+
+Chciałem Cię przeprosić...
+Nie piszę tego dla efektu, tylko dlatego, że naprawdę mi zależy...
+-->
+
+TU WPISZ SWÓJ TEKST PRZEPROSIN.
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      const error = document.getElementById("error");
+
+      if (input === "voldemort") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("caseFile").style.display = "block";
+      } else {
+        error.style.display = "block";
+      }
+    }
+
+    document.getElementById("password").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        checkPassword();
+      }
+    });
+  </script>
+
+</body>
+</html>
