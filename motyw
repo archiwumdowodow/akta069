@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Motyw</title>
+
+<style>
+
+body{
+
+margin:0;
+
+background:#111;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:20px;
+
+font-family:"Courier New", monospace;
+
+}
+
+.paper{
+
+background:#e6e1d2;
+
+width:100%;
+
+max-width:720px;
+
+padding:40px 30px;
+
+border:1px solid #999;
+
+box-shadow:0 0 40px rgba(0,0,0,.7);
+
+}
+
+h1{
+
+margin-top:0;
+
+font-size:34px;
+
+border-bottom:3px solid #111;
+
+display:inline-block;
+
+}
+
+.quote{
+
+margin-top:35px;
+
+font-size:22px;
+
+line-height:1.8;
+
+white-space:pre-line;
+
+}
+
+.back{
+
+margin-top:50px;
+
+}
+
+a{
+
+color:#111;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="paper">
+
+<h1>MOTYW</h1>
+
+<div class="quote">
+
+[TUcosbedzie]
+
+</div>
+
+<div class="back">
+
+<a href="index.html">← Powrót do akt</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
